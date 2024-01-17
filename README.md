@@ -22,6 +22,11 @@ cd diffusion-explainer
 python -m http.server 8000
 ```
 
+推荐使用docker一键部署
+```
+docker run -d --name diffusion-explainer -h diffusion-explainer --restart=unless-stopped -e TZ="Asia/Shanghai" -p 8000:8000 ikiwicc/diffusion-explainer:latest
+```
+
 Then, on your web browser, access http://localhost:8000.
 You can replace 8000 with other port numbers you want to use.
 
